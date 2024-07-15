@@ -1,10 +1,12 @@
 package online.agenta.controllers;
 
+import lombok.Data;
 import lombok.RequiredArgsConstructor;
 import online.agenta.api.PostAPI;
 import online.agenta.dto.request.PostRequest;
 import online.agenta.dto.request.PostResponse;
 import online.agenta.services.PostService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Set;
@@ -12,6 +14,7 @@ import java.util.UUID;
 
 @RestController("/post")
 @RequiredArgsConstructor
+@Data
 public class PostController implements PostAPI {
 
     private final PostService postService;

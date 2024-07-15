@@ -1,6 +1,7 @@
 package online.agenta.services;
 
 import jakarta.transaction.Transactional;
+import lombok.Data;
 import lombok.RequiredArgsConstructor;
 import online.agenta.dto.request.PostRequest;
 import online.agenta.dto.request.PostResponse;
@@ -19,6 +20,7 @@ import java.util.UUID;
 @Service
 @RequiredArgsConstructor
 @Transactional
+@Data
 public class PostService {
 
     private final PostJpaRepository repository;

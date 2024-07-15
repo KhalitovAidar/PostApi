@@ -4,11 +4,13 @@ import online.agenta.models.PostEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
 
 import java.time.LocalDateTime;
 import java.util.Optional;
 import java.util.UUID;
 
+@Repository
 public interface PostJpaRepository extends JpaRepository<PostEntity, UUID> {
     Optional<PostEntity> findById(UUID id);
 
